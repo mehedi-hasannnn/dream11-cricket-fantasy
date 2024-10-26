@@ -1,12 +1,16 @@
 
 import './App.css'
+import Footer from './components/Footer/Footer'
+import Header from './components/Header/Header'
 
 function App() {
   
 
   return (
     <>
-      <h1 className='text-4xl'>Dream 11</h1>
+      <Header></Header>
+
+      <Footer></Footer>
       
     </>
   )
