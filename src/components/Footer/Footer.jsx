@@ -56,7 +56,7 @@ const Footer = () => {
   
   
   <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm">
-    &copy; 2024 Your Company. All Rights Reserved.
+    &copy; 2024 MehediTech LTD. All Rights Reserved.
   </div>
 </footer>
 

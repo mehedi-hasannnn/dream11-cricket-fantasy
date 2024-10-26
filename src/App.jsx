@@ -4,56 +4,62 @@ import Header from './components/Header/Header';
 import Players from './components/Players/Players';
 import Selected from './components/Selected/Selected';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [isSelected, setIsSelected] = useState(false);
   const [selectedPlayers, setSelectedPlayers] = useState([]); 
+  const [coinCount, setCoinCount] = useState(0);
   const maxPlayers = 6;
 
-  // Toggle view between Available and Selected
   const handleToggle = (view) => {
     setIsSelected(view === 'selected');
   };
 
-  // Add a player to the selected list
+  const handleAddCoins = () => {
+    setCoinCount((prevCount) => prevCount + 200000);
+  };
+
   const handlePlayerSelect = (player) => {
-    if (selectedPlayers.length < maxPlayers) {
+    if (selectedPlayers.length >= maxPlayers) {
+      toast.error("You can only select up to 6 players!", { position: "top-center", autoClose: 3000 });
+    } else if (coinCount < player.price) {
+      toast.error("Not enough coins to add this player!", { position: "top-center", autoClose: 3000 });
+    } else if (!selectedPlayers.find(p => p.player_id === player.player_id)) {
       setSelectedPlayers((prev) => [...prev, player]);
+      setCoinCount((prevCount) => prevCount - player.price);
     } else {
-      alert("You can only select up to 6 players!");
+      toast.info("Player is already selected!", { position: "top-center", autoClose: 2000 });
     }
   };
 
-  // Remove a player from the selected list
   const handleRemovePlayer = (playerId) => {
-    setSelectedPlayers(prev => prev.filter(player => player.player_id !== playerId));
+    const player = selectedPlayers.find(p => p.player_id === playerId);
+    if (player) {
+      setSelectedPlayers((prev) => prev.filter(p => p.player_id !== playerId));
+      setCoinCount((prevCount) => prevCount + player.price);
+    }
   };
 
   return (
     <>
-      <Header />
+      <ToastContainer />
+      <Header coinCount={coinCount} handleAddCoins={handleAddCoins} />
       <div>
-        <div className="flex justify-between mt-5 mb-4">
-          <h3 className="font-bold text-2xl">Available Players</h3>
+        <div className="flex justify-end mt-5 mb-4">
           <div className="flex gap-4 mr-3 border rounded-lg">
-            <button 
-              className="font-bold" 
-              onClick={() => handleToggle('available')}
-            >
+            <button className="font-bold" onClick={() => handleToggle('available')}>
               Available
             </button>
-            <button 
-              className="font-bold" 
-              onClick={() => handleToggle('selected')}
-            >
+            <button className="font-bold" onClick={() => handleToggle('selected')}>
               Selected ({selectedPlayers.length})
             </button>
           </div>
         </div>
 
-        {/* Conditionally render either the Players or Selected component */}
         {isSelected 
-          ? <Selected players={selectedPlayers} onRemovePlayer={handleRemovePlayer} /> 
+          ? <Selected players={selectedPlayers} onRemovePlayer={handleRemovePlayer} handleBack={() => handleToggle('available')} /> 
           : <Players onPlayerSelect={handlePlayerSelect} selectedPlayers={selectedPlayers} />}
       </div>
       <Footer />
