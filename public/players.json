@@ -1,0 +1,123 @@
+[
+    {
+      "player_id": 1,
+      "name": "Virat Kohli",
+      "country": "India",
+      "image": "https://i.ibb.co.com/z4qL51W/Virat-Kohli-in-PMO-New-Delhi-jpg.webp",
+      "role": "Batsman",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm medium",
+      "price": 90000
+    },
+    {
+      "player_id": 2,
+      "name": "Ben Stokes",
+      "country": "England",
+      "image": "https://i.ibb.co.com/y0GxSQr/images-1.jpg",
+      "role": "All-rounder",
+      "battingType": "Left-handed bat",
+      "bowlingType": "Right-arm fast-medium",
+      "price": 85000
+    },
+    {
+      "player_id": 3,
+      "name": "Kane Williamson",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/fCDc9q3/kane-williamson.jpg",
+      "role": "Batsman",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm off-spin",
+      "price": 78000
+    },
+    {
+      "player_id": 4,
+      "name": "David Warner",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/MfxFgqw/images.jpg",
+      "role": "Batsman",
+      "battingType": "Left-handed bat",
+      "bowlingType": "Right-arm leg-break",
+      "price": 80000
+    },
+    {
+      "player_id": 5,
+      "name": "Babar Azam",
+      "country": "Pakistan",
+      "image": "https://i.ibb.co.com/16j8rcp/AFP-20240530-34-UE7-A9-v1-High-Res-776146379-1717617996.webp",
+      "role": "Batsman",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm off-spin",
+      "price": 82000
+    },
+    {
+      "player_id": 6,
+      "name": "Rashid Khan",
+      "country": "Afghanistan",
+      "image": "https://i.ibb.co.com/bW7NS8n/gettyimages-2155156903-612x612.jpg",
+      "role": "Bowler",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm leg-spin",
+      "price": 75000
+    },
+    {
+      "player_id": 7,
+      "name": "Jasprit Bumrah",
+      "country": "India",
+      "image": "https://i.ibb.co.com/52ZH1L1/Epo-KMHy-Bvr.webp",
+      "role": "Bowler",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm fast",
+      "price": 78000
+    },
+    {
+      "player_id": 8,
+      "name": "Shakib Al Hasan",
+      "country": "Bangladesh",
+      "image": "https://i.ibb.co.com/4pfMsWT/prothomalo-english-2023-08-69852014-e194-4504-a669-bc4d1e06cae3-prothomalo-bangla-2023-08-5cf9b0f5-9.webp",
+      "role": "All-rounder",
+      "battingType": "Left-handed bat",
+      "bowlingType": "Left-arm spin",
+      "price": 83000
+    },
+    {
+      "player_id": 9,
+      "name": "Trent Boult",
+      "country": "New Zealand",
+      "image": "https://i.ibb.co.com/5WNLsBr/383091.webp",
+      "role": "Bowler",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Left-arm fast",
+      "price": 72000
+    },
+    {
+      "player_id": 10,
+      "name": "Steve Smith",
+      "country": "Australia",
+      "image": "https://i.ibb.co.com/tZmZSxZ/0-Getty-Images-1713048001.webp",
+      "role": "Batsman",
+      "battingType": "Right-handed bat",
+      "bowlingType": "Right-arm spin",
+      "price": 87000
+    },
+    {
+      "player_id": 11,
+      "name": "Jos Buttler",
+      "country": "England",
+      "image": "https://i.ibb.co.com/12Syfby/images.webp",
+      "role": "Wicketkeeper",
+      "battingType": "Right-handed bat",
+      "bowlingType": "None",
+      "price": 79000
+    },
+    {
+      "player_id": 12,
+      "name": "Quinton de Kock",
+      "country": "South Africa",
+      "image": "https://i.ibb.co.com/12K2ZKh/quinton-de-kock.jpg",
+      "role": "Wicketkeeper",
+      "battingType": "Left-handed bat",
+      "bowlingType": "None",
+      "price": 78000
+    }
+  ]
+  
